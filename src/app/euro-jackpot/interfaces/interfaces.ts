@@ -31,7 +31,7 @@ export interface EuroJackpot {
   climbedSince: number;
 }
 
-export interface LastEuroJackpot extends EuroJackpot{
+export interface LastEuroJackpot extends EuroJackpot {
   numbers: number[];
   euroNumbers: number[];
   Winners: number;
