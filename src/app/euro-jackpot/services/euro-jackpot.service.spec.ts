@@ -2,7 +2,7 @@ import { TestBed } from '@angular/core/testing';
 
 import { EuroJackpotService } from './euro-jackpot.service';
 import { ApiService } from '../../core/services/api/api.service';
-import { resultsUrl } from '../constants/euro-jackpot.constants';
+import { RESULTS_URL } from '../constants/euro-jackpot.constants';
 
 describe('EuroJackpotService', () => {
   let service: EuroJackpotService;
@@ -31,6 +31,6 @@ describe('EuroJackpotService', () => {
   it('should call api for eurojackpot results', () => {
     const spy = spyOn(apiService, 'get').and.callThrough();
     service.getResults();
-    expect(spy).toHaveBeenCalledWith(resultsUrl);
+    expect(spy).toHaveBeenCalledWith(RESULTS_URL);
   });
 });
