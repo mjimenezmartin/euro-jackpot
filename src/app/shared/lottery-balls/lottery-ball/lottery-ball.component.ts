@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-lottery-ball',
@@ -6,8 +6,8 @@ import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
   styleUrls: ['./lottery-ball.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class LotteryBallComponent implements OnInit {
-  constructor() {}
+export class LotteryBallComponent {
+  @Input() number!: number;
 
-  ngOnInit(): void {}
+  constructor() {}
 }

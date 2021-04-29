@@ -1,0 +1,15 @@
+@import '~src/styles/variables';
+
+:host {
+  ::ng-deep app-lottery-ball {
+    .lottery-ball{
+      border-color: $mat-gray;
+    }
+
+    &.euro-number-ball {
+      .lottery-ball {
+        border-color: $warn;
+      }
+    }
+  }
+}
