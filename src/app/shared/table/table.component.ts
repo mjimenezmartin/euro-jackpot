@@ -7,13 +7,14 @@ import {
 
 @Component({
   selector: 'app-table',
-  template: ` <table mat-table></table> `,
+  templateUrl: `./table.component.html`,
   styleUrls: ['./table.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class TableComponent implements OnInit {
-  @Input() dataSource: any;
-  @Input() dataStructure: [string, string][] | undefined;
+  @Input() dataSource!: any[];
+  @Input() headers!: { [key: string]: string };
+  @Input() displayedColumns!: string[];
 
   constructor() {}
 
