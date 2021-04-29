@@ -1,1 +1,13 @@
-<p>euro-jackpot works!</p>
+<section class="page-wrapper">
+  <div fxFlex.gt-md="70%" fxLayout="column" fxFlexAlign="center" fxLayoutGap="1ch">
+    <app-page-header [title]="title|uppercase"></app-page-header>
+
+    <section fxLayout="column" fxLayoutGap="2ch">
+      <app-section-header [title]="results.last.date.full"></app-section-header>
+
+      <app-lottery-balls [numbers]="results.last.numbers" [euroNumbers]="results.last.euroNumbers"></app-lottery-balls>
+
+      <app-table [dataSource]="ranks" [displayedColumns]="columns" [headers]="headers"></app-table>
+    </section>
+  </div>
+</section>

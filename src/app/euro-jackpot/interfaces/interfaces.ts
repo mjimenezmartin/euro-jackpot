@@ -9,9 +9,11 @@ export interface DetailledDate {
 }
 
 export interface Rank {
+  tier?: number;
   winners: number;
   specialPrize: number;
   prize: number;
+  formatedPrice?: string;
 }
 
 export interface Odds {
